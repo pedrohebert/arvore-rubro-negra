@@ -30,7 +30,7 @@ int main() {
 	tree arv = NULL;
 	int opc, valor;
 
-	while(1){ //troca para 0 para testes
+	while(0){ //troca para 0 para testes
 		opc = menu();
 		system(clear);
 		//printf("\033[2J\033[H"); //outra forma de limpar o terminal

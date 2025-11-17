@@ -392,8 +392,8 @@ void corrigirRemover(tree *raiz, tree *remover){
 
             // caso 4d: subrino da esquerda (distante) é rubro
             if (subrEsq && subrEsq->cor == rubro){
+                irmao->cor = pai->cor;
                 pai->cor = negro;
-                irmao->cor = rubro;
                 subrEsq->cor = negro;
                 rotacaoDir(pnt_pai);
                 return;
@@ -433,8 +433,8 @@ void corrigirRemover(tree *raiz, tree *remover){
 
             // caso 4e: subrino da direita (distante) é rubro
             if (subrDir && subrDir->cor == rubro){
+                irmao->cor = pai->cor;
                 pai->cor = negro;
-                irmao->cor = rubro;
                 subrDir->cor = negro;
                 rotacaoEsq(pnt_pai);
                 return;
@@ -511,19 +511,83 @@ void desenharArvore(tree curr, int nivel) {
 
 void teste(tree arv){
 
-    inserir(&arv, 4);
+    inserir(&arv, 0);
     puts("raiz");
     desenharArvore(arv,0);
     getchar();
-    inserir(&arv, 2);
+    inserir(&arv, 1);
     puts("raiz");
     desenharArvore(arv, 0);
+    getchar();
+    inserir(&arv, 2);
+    puts("raiz");
+    desenharArvore(arv,0);
     getchar();
     inserir(&arv, 3);
     puts("raiz");
     desenharArvore(arv,0);
     getchar();
-    inserir(&arv, 1);
+    inserir(&arv, 4);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 5);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 6);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 7);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 8);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 9);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 10);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 11);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 12);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 13);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 15);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 16);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 17);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 18);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 19);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    inserir(&arv, 20);
     puts("raiz");
     desenharArvore(arv,0);
     getchar();
@@ -541,6 +605,10 @@ void teste(tree arv){
     desenharArvore(arv,0);
     getchar();
     removerNo(&arv, 1);
+    puts("raiz");
+    desenharArvore(arv,0);
+    getchar();
+    removerNo(&arv, 5);
     puts("raiz");
     desenharArvore(arv,0);
     getchar();
